@@ -1,0 +1,15 @@
+requests
+bs4
+langchain_community
+streamlit
+langchain_groq 
+chromadb 
+python-dotenv
+sentence-transformers
+pdfplumber
+python-docx
+PyPDF2
+langchain_core
+langchain
+dotenv
+langchain-huggingface
