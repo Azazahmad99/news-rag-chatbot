@@ -53,27 +53,31 @@ Built using **Streamlit**, **BeautifulSoup**, **LangChain**, and **Groq API**.
 ----------------------------------------------------------
 
 ## Installation Steps
+1. Clone the repository
 
 1. Clone the repository
 ```bash
 git clone https://github.com/your-username/news-rag-chatbot.git
 cd news-rag-chatbot
-
+```
 
 2. Create a virtual environment (optional but recommended)
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
 
 3. Install dependencies
 ```bash
 pip install -r requirements.txt
+```
 
 4. Set up environment variables
 GROQ_API_KEY="your_groq_api_key"
 
 ▶️ Run the App
-'''bash
+```bash
 streamlit run main_app.py
+```
 
 Choose a news channel from the sidebar, select your preferred LLM (Gemma2 or LLaMA3), and start chatting with the news!
