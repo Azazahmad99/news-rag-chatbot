@@ -33,10 +33,9 @@ if news_channel :
 
 
 # ## Select Model
-llm_model = st.sidebar.selectbox("Select LLM model", ["Llama3","Gemma2"])
-
-model_dict = {"Gemma2" : "gemma2-9b-it", "Llama3" : "llama3-8b-8192"}
-
+llm_model = st.sidebar.selectbox("Select LLM model", ["Maverick","Llama3","Gemma2"])
+model_dict = {"Gemma2" : "gemma2-9b-it", "Llama3" : "llama3-8b-8192",
+            "Maverick" : "meta-llama/llama-4-maverick-17b-128e-instruct"}
 llm = model_dict[llm_model]
 
 #app titles
