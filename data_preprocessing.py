@@ -36,16 +36,26 @@ def setup_rag_pipeline(file_path, groq_api_key, llm):
     memory = ConversationBufferMemory(memory_key="history", return_messages=True)
 
     # 7. Create the prompt template with history
-    prompt_template = """You are a helpful chatbot that answers questions based on the provided context and conversation history.
-    Please provide the most accurate respone based on the question.
-    The context is:
+    prompt_template = """
+    You are an intelligent assistant that answers questions based on the latest news content. 
+    The context contains multiple news articles. Your job is to find relevant information and respond clearly, accurately, and engagingly.
+
+    Instructions:
+    - Present the answer in well-structured bullet points.
+    - Use bold text for important keywords, names, or dates if supported.
+    - Summarize concisely while keeping the answer informative and attractive.
+    - Avoid repeating or irrelevant content.
+
+    📌 Context (News Data):
     {context}
 
-    Conversation history:
+    📜 Chat History:
     {history}
 
-    Answer the following question: {question}
-    If you cannot find the answer in the context, please say "I'm sorry, but I cannot find the answer in the provided information."
+    ❓ Question:
+    {question}
+
+    ✅ Your Response:
     """
     
     prompt = ChatPromptTemplate.from_template(prompt_template)
